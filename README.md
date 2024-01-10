@@ -1,3 +1,6 @@
-npm install
+localmente:
+npm install;
+npm start;
 
-npm start
+para usar docekr:
+docker-compose up;
