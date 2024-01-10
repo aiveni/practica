@@ -1,0 +1,25 @@
+<!-- sitioB.com (página HTML) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de Ataque CORS</title>
+</head>
+<body>
+  <h1>Simulación de Ataque CORS</h1>
+  <button onclick="realizarAtaque()">Realizar Ataque CORS</button>
+
+  <script>
+    async function realizarAtaque() {
+      try {
+        const response = await fetch('http://localhost:3001/recurso-protegido');
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error('Error al realizar el ataque CORS:', error);
+      }
+    }
+  </script>
+</body>
+</html>
